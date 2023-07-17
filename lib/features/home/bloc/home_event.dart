@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:bloc_demo3/features/home/models/home_product_data_model.dart';
 
 @immutable

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:bloc_demo3/data/cart_ittems.dart';
+import 'package:bloc_demo3/data/cart_items.dart';
 import 'package:bloc_demo3/features/home/models/home_product_data_model.dart';
 import 'package:meta/meta.dart';
 part 'cart_event.dart';
