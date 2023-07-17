@@ -46,7 +46,7 @@ class _CartState extends State<Cart> {
                   itemBuilder: ((context, index) {
                     return CartTileWidget(
                       productDataModel: successState.cartItems[index],
-                      homeBloc: cartBloc,
+                      cartBloc: cartBloc,
                     );
                   }));
 

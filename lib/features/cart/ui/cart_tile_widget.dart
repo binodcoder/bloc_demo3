@@ -5,13 +5,13 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../bloc/cart_bloc.dart';
- 
+
 class CartTileWidget extends StatelessWidget {
   final ProductDataModel productDataModel;
-  final CartBloc homeBloc;
+  final CartBloc cartBloc;
   const CartTileWidget({
     required this.productDataModel,
-    required this.homeBloc,
+    required this.cartBloc,
     super.key,
   });
 
@@ -45,12 +45,12 @@ class CartTileWidget extends StatelessWidget {
               children: [
                 IconButton(
                     onPressed: () {
-                   //   homeBloc.add(HomeProductWishlistButtonClickedEvent(clickedProduct: productDataModel));
+                      //   homeBloc.add(HomeProductWishlistButtonClickedEvent(clickedProduct: productDataModel));
                     },
                     icon: Icon(Icons.favorite_border)),
                 IconButton(
                   onPressed: () {
-                   // homeBloc.add(HomeProductCartButtonClickedEvent(clickedProduct: productDataModel));
+                    cartBloc.add(CartRemoveFromCartEvent(productDataModel: productDataModel));
                   },
                   icon: Icon(Icons.shopping_bag),
                 ),
